@@ -28,6 +28,7 @@ export class ChatController {
     @Req() req: any, // Trong thực tế, bạn sẽ dùng một Guard hoặc Decorator để trích xuất User.
     @Body() createConversationDto?: CreateConversationDto,
   ): ConversationDto {
+    console.log('[Create new conversation]', new Date())
     // [LƯU Ý]: Giả sử thông tin người dùng được đính kèm vào req.user bởi một Auth Guard.
     // Trong môi trường thật, bạn sẽ cần một Auth Guard để xác thực JWT và đính kèm user vào request.
     // Ví dụ đơn giản:
